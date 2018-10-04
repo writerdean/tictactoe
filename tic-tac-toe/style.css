@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* The animation code */
+@keyframes borderWin {
+    0%   {border-color: red;}
+    16.65%  {border-color: orange;}
+    33.3%  {border-color: yellow;}
+    50%  {border-color: blue;}
+    66.6%  {border-color: green;}
+    83.25%  {border-color: indigo;}
+    100% {border-color: violet;}
+}
+
+/* The element to apply the animation to */
+.winner {
+    border-color: red;
+    border: 35px solid;
+    animation-name: borderWin;
+    animation-duration: 1s;
+    /* animation-direction: alternate; */
+    animation-iteration-count: 4;
+}
+
+.main {
+      height: 100%;
+      width: 100%;
+  }
+.left {
+      background-image: url("https://i.pinimg.com/originals/74/8a/63/748a638f380e7ef615ae0f5a08089676.jpg");
+      /* background-repeat: no-repeat; */
+      background-size: 100%;
+      text-align: center;
+      border: 3px solid black;
+      width: 50%;
+  }
+    .board {
+        margin: auto;
+        padding: 75px;
+        height: 100%;
+        width: 100%;
+    }
+        .square {
+            height: 35%;
+            width: 33%;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            font-size: 30px;
+        }
+            .row-one{
+                border-bottom: 15px solid black;
+            }  
+            .row-two{
+                border-bottom: 15px solid black;
+            }  
+            .col-one {
+                border-right: 15px solid black;
+            }
+            .col-two {
+                border-right: 15px solid black;
+            }
+.left-top {
+    height: 50%;
+}
+.left-bottom {
+    height: 50%;
+}
+.right {
+      width: 50%;
+  }
+  .one {
+    margin: auto;
+    height: 50%;
+    text-align: center;
+    color: yellow;
+    background-color: rgb(204, 20, 20);
+    font-family: 'Limelight';
+    font-size: 72px;
+    font-weight: 900;
+    /* transition: border 1s; */
+  }
+  .one p {
+      margin-top: 0;
+  }
+  .two {
+    margin: auto;
+    height: 50%;
+    text-align: center;
+    color: yellow;
+    background-color: rgb(204, 20, 20);
+    font-family: 'Limelight';
+    font-size: 72px;
+    font-weight: 900;
+  }
+  .two p {
+    padding-top: 10px;
+    margin-top: 0;
+}
+  .player-active {
+    border: 35px solid darkblue;
+    }
+
+    .P1C {
+        color: yellow;
+        font-family: 'Limelight';
+        font-size: 72px;
+        font-weight: 900;
+    }
+    .P2C {
+        color: yellow;
+        font-family: 'Kanit';
+        font-size: 72px;
+        font-weight: 900;
+    }
+  .winner {
+    border: 35 solid darkblue;
+  }
+  .loser {
+      background-color: lightslategray;
+      border: 5px solid black;
+      color: lightslategray;
+  }
+
+  button {
+    margin: 250px 0 5px 150px;
+    background-color: rgb(146, 183, 206);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36;
+
+}
+  .message {
+    /* display: inline; */
+    font-size: 48px;
+    color: black;
+    height: 250px;
+    widows: 250px;
+    margin-top: 50px;
+    background-color: white;
+  }
+
+.hidden {
+      display: none;
+  }

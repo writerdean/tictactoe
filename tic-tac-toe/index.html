@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ready Player Tic-Tac-Toe</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:800|Limelight|Sigmar+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Two main divs, left holds the board, right holds the Players, turn indicator and score -->
+
+    <div class="flex-container main">
+        <div class="left">
+            <div class="left-top">
+                <div class="board">
+                    <div class="flex-container row-one">
+                        <div class="square col-one" id='R1C1' onClick="replyClick(this.id)"></div>
+                        <div class="square col-two" id='R1C2' onClick="replyClick(this.id)"></div>
+                        <div class="square col-three" id='R1C3' onClick="replyClick(this.id)"></div>
+                    </div>
+            
+                    <div class="flex-container row-two">
+                        <div class="square col-one" id='R2C1' onClick="replyClick(this.id)"></div>
+                        <div class="square col-two" id='R2C2' onClick="replyClick(this.id)"></div>
+                        <div class="square col-three" id='R2C3' onClick="replyClick(this.id)"></div>
+                    </div>
+            
+                    <div class="flex-container row-three">
+                        <div class="square col-one" id='R3C1' onClick="replyClick(this.id)"></div>
+                        <div class="square col-two" id='R3C2' onClick="replyClick(this.id)"></div>
+                        <div class="square col-three" id='R3C3' onClick="replyClick(this.id)"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="left-bottom">                    
+                    <button class="reset hidden" onclick="reloadPage()">Play Again?</button>
+            </div>
+
+        </div>
+
+
+        <div class="right">
+
+            <div class="player one player-active">
+                <p class='active'><br>READY<br>PLAYER<br>ONE</p>
+
+            </div>
+
+            <div class="player two">
+                <p class='active'><br>Player Two</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
