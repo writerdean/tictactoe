@@ -111,14 +111,17 @@
     .P1C {
         color: yellow;
         font-family: 'Limelight';
-        font-size: 72px;
+        font-size: 78px;
         font-weight: 900;
+        text-shadow: 3px 3px black;
     }
     .P2C {
         color: yellow;
         font-family: 'Kanit';
-        font-size: 72px;
+        font-size: 78px;
         font-weight: 900;
+        text-shadow: 3px 3px black;
+        
     }
   .winner {
     border: 35 solid darkblue;
@@ -131,7 +134,7 @@
 
   button {
     margin: 250px 0 5px 150px;
-    background-color: rgb(146, 183, 206);
+    background-color: rgb(146, 183, 206, 0.0);
     border: none;
     border-radius: 8px;
     color: white;
@@ -140,6 +143,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 36;
+    text-shadow: 3px 3px black;
 
 }
   .message {
@@ -150,8 +154,12 @@
     widows: 250px;
     margin-top: 50px;
     background-color: white;
+    text-shadow: 3px 3px black;
   }
 
 .hidden {
       display: none;
   }
+
+
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */

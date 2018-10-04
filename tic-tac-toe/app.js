@@ -81,13 +81,13 @@ function checkForWinner () {
         playerWins(playerOneBox)
         // message.classList.remove('hidden')
         button.classList.remove('hidden')
-        button.textContent = 'Player One Wins! Play again?'
+        button.textContent = 'Player One Wins!  Play again?'
     } else if(checkIfPlayerWins(playerTwoClicks)) {
         console.log('Player Two wins.')
         playerWins(playerTwoBox)
         // message.classList.remove('hidden')
         button.classList.remove('hidden')
-        button.textContent = 'Player Two Wins! Play again?'
+        button.textContent = 'Player Two Wins!  Play again?'
     } else {
         if(document.querySelectorAll('.clicked').length === 9) {
             // message.classList.remove('hidden')
