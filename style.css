@@ -20,7 +20,22 @@
 }
 
 /* The element to apply the animation to */
-.winner {
+.one.winner {
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMTY0MTU1MTE1MF5BMl5BanBnXkFtZTgwOTI4NzE4NDM@._V1_SY1000_CR0,0,674,1000_AL_.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: red;
+    border: 35px solid;
+    animation-name: borderWin;
+    animation-duration: 1s;
+    /* animation-direction: alternate; */
+    animation-iteration-count: 4;
+}
+
+.two.winner {
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMTA5Mzg3MDg0NzheQTJeQWpwZ15BbWU4MDIzODcxODQz._V1_SY1000_CR0,0,674,1000_AL_.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     border-color: red;
     border: 35px solid;
     animation-name: borderWin;
@@ -87,6 +102,12 @@
     font-weight: 900;
     /* transition: border 1s; */
   }
+  .one:hover {
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMTY0MTU1MTE1MF5BMl5BanBnXkFtZTgwOTI4NzE4NDM@._V1_SY1000_CR0,0,674,1000_AL_.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .one p {
       margin-top: 0;
   }
@@ -100,12 +121,18 @@
     font-size: 72px;
     font-weight: 900;
   }
+  .two:hover {
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMTA5Mzg3MDg0NzheQTJeQWpwZ15BbWU4MDIzODcxODQz._V1_SY1000_CR0,0,674,1000_AL_.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .two p {
     padding-top: 10px;
     margin-top: 0;
 }
   .player-active {
     border: 35px solid darkblue;
+    background-color: none;
     }
 
     .P1C {
@@ -144,7 +171,10 @@
     display: inline-block;
     font-size: 36;
     text-shadow: 3px 3px black;
-
+}
+button:hover {
+    border: 2px solid darkblue;
+    border-radius: 8px;
 }
   .message {
     /* display: inline; */

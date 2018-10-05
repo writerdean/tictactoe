@@ -72,7 +72,6 @@ function checkIfPlayerWins (person) {
         return true
     }
     return false
-    
 }
 
 function checkForWinner () {
@@ -93,7 +92,6 @@ function checkForWinner () {
             // message.classList.remove('hidden')
             button.classList.remove('hidden')
             button.textContent = 'It\'s a draw!  Try again?'
-
         }
     }
 }
@@ -107,8 +105,6 @@ function playerWins (person) {
         playerOneBox.classList.add('loser')
     }
 }
-
-
 
 
 // this changes the turn to the next person
