@@ -25,14 +25,6 @@ var colThree = ['R1C3', 'R2C3', 'R3C3']
 var diagOne = ['R1C1', 'R2C2', 'R3C3']
 var diagTwo = ['R1C3', 'R2C2', 'R3C1']
 
-// function test() {
-//     for (var i = 0; i < playerOneClicks.length; i++) {
-//         if (rowOne.indexOf(playerOneClicks[i]) === -1) {
-//             console.log('none found in test function')
-//         }
-//         console.log(playerOneClicks[i] + rowOne.indexOf)
-//     }
-// }
 
 function checkForMatch (playerArr, winArr) {
 
@@ -47,30 +39,14 @@ function checkForMatch (playerArr, winArr) {
 
 function checkIfPlayerWins (person) {
     
-    if (checkForMatch(person, rowOne)) {
-        return true
-    }
-    if (checkForMatch(person, rowTwo)) {
-        return true
-    }
-    if (checkForMatch(person, rowThree)) {
-        return true
-    }
-    if (checkForMatch(person, colOne)) {
-        return true
-    }
-    if (checkForMatch(person, colTwo)) {
-        return true
-    }
-    if (checkForMatch(person, colThree)) {
-        return true
-    }
-    if (checkForMatch(person, diagOne)) {
-        return true
-    }
-    if (checkForMatch(person, diagTwo)) {
-        return true
-    }
+    if (checkForMatch(person, rowOne)) {return true}
+    if (checkForMatch(person, rowTwo)) {return true}
+    if (checkForMatch(person, rowThree)) {return true}
+    if (checkForMatch(person, colOne)) {return true}
+    if (checkForMatch(person, colTwo)) {return true}
+    if (checkForMatch(person, colThree)) {return true}
+    if (checkForMatch(person, diagOne)) {return true}
+    if (checkForMatch(person, diagTwo)) {return true}
     return false
 }
 
@@ -78,19 +54,19 @@ function checkForWinner () {
     if(checkIfPlayerWins(playerOneClicks)) {
         console.log('Player One wins!!!!!!')
         playerWins(playerOneBox)
-        // message.classList.remove('hidden')
         button.classList.remove('hidden')
+        // button.classList.add('reset')
         button.textContent = 'Player One Wins!  Play again?'
     } else if(checkIfPlayerWins(playerTwoClicks)) {
         console.log('Player Two wins.')
         playerWins(playerTwoBox)
-        // message.classList.remove('hidden')
         button.classList.remove('hidden')
+        // button.classList.add('reset')
         button.textContent = 'Player Two Wins!  Play again?'
     } else {
         if(document.querySelectorAll('.clicked').length === 9) {
-            // message.classList.remove('hidden')
             button.classList.remove('hidden')
+            // button.classList.add('reset')
             button.textContent = 'It\'s a draw!  Try again?'
         }
     }
@@ -105,7 +81,6 @@ function playerWins (person) {
         playerOneBox.classList.add('loser')
     }
 }
-
 
 // this changes the turn to the next person
 var nextTurn = function() {
@@ -131,20 +106,23 @@ var toggleActiveClass = function() {
     }
 }
 
-
 // gets the id of the clicked square
 function replyClick(clicked_id) {
     clickedSquareId = clicked_id;
     // console.log(clickedSquareId)
 }
 
-
 // this function will enter a token in the square, and indicate that the square has now been clicked
+// added two 'if's' to say if player box already contains class of winner, alert to say so
 var chooseSquare = function(event) {
     if (event.target.classList.contains('square')) 
 
         if (event.target.classList.contains('clicked')) {
             alert('Please choose another square')
+        } else if(playerOneBox.classList.contains('winner')) {
+            alert('Player One has already won the game!')
+        } else if(playerTwoBox.classList.contains('winner')) {
+            alert('Player Two has already won the game!')
         } else {
             if(turnIndicator === 'playerOne') {
                 event.target.textContent = playerOneToken;
@@ -167,3 +145,15 @@ function reloadPage() {
 } 
 
 board.addEventListener('click', chooseSquare)
+
+
+
+
+
+
+
+
+// add code to:  add class of reset to button every time hidden is remove
+// upon each click, if button class contains reset, button text changes to game over, play again?
+// possibly, if button class contains reset, all squares contained click, and button message changes to game over, play again
+
